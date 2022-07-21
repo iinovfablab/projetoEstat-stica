@@ -1,0 +1,10 @@
+select count(S.group_id) as "Março 2022", S.name as "Cursos" from (select sp.id, sp.group_id, g2."name"  from public."groups" g2 ,public.statistic_profiles sp
+	inner join public.statistic_profile_trainings spt on
+	sp.id = spt.statistic_profile_id and spt.training_id = 24
+	left join public."groups" g on
+	sp.group_id = g.id and g.id = 16
+	where spt.created_at  between '2022-04-01 00:00:00' and '2022-05-01 00:00:00'
+	and g2.id = sp.group_id) as S
+	group by S.name
+
+	
