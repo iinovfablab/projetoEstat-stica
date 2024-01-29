@@ -14,10 +14,12 @@
         "root": "root",
         "password": "f@bl@b2018@#",
         "remote_addres": [
-            "172.31.0.6",
+            "172.31.0.4",
             5432
         ]
-    }
-    
-    
+    },
+	"password":{
+		"key":[],
+		"value":["123456"]
+	}
 }

@@ -1,42 +1,407 @@
 <!DOCTYPE html>
-<html lang ="pt-br>
+<html lang ="pt-br">
 <head>
 
 	<meta charset="UTF-16"/>
-	<link rel="stylesheet" href="teste.css">
 
+	
+	<style>
+			.header {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		}
+
+		h1 {
+		font-size: 27px;
+		text-align: center;
+		font-family: Arial;
+
+		}
+
+		h2 {
+		font-size: 22px;
+		text-align: center;
+		display: inline-block;
+		font-family: Arial;
+		padding-right: 20px;
+		}
+
+		h3 {
+		font-size: 22px;
+		text-align: center;
+		display: inline-block;
+		font-family: Arial;
+		padding-right: 20px;
+		}
+
+		h4 {
+		font-size: 22px;
+		text-align: center;
+		display: inline-block;
+		font-family: Arial;
+		padding-right: 20px;
+		}
+
+		h5 {
+		font-size: 20px;
+		text-align: center;
+		display: inline-block;
+		font-family: Arial;
+		padding-left: 20px;
+		}
+
+		.graph {
+		display: flex;
+		margin: auto;
+		width: 50%;
+		border: 3px solid white;
+		padding-top: 150px;
+		width: 950px;
+		height: 450px;
+
+		}
+		.table{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+		max-width: 45%;
+		max-height: 600px;
+		padding-top: 18px;
+		}
+		
+		.rank{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+		max-width: 1000px;
+		max-height: 800px;
+		padding-top: 18px;
+		}
+		
+		.rh{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+		max-width: 60%;
+		max-height: 85%;
+		padding-top: 18px;
+		}
+		.pie{
+		display: flex;
+		margin: auto;
+		border: 3px solid white;
+	
+		
+		}
+		.finder{
+		}
+		.zmorph{
+		}
+		.laser{
+		padding-top: 10px;
+		}
+		.horizontalCenterRowTitle {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: center;
+		}
+		.horizontalCenterColumn {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+
+		}
+		.page {
+		width: 29.7cm;
+		height: 20cm;
+		margin: 1cm auto;
+		margin-top: 0;
+		background: white;
+		display: block;
+		}
+		.page2{
+		width: 29.7cm;
+		height: 20cm;
+		margin: 1cm auto;
+		margin-top: 0;
+		background: white;
+		display: flex;
+		justify-content: center;
+		}
+
+		.curved-div {
+		position:absolute;
+		left:0;
+		background: red;
+		height: 20.5cm;
+		width:1.5cm;
+
+
+		}
+
+		.curved-div2 {
+		position:absolute;
+		right:0;
+
+		transform: scaleX(-1);
+		background:blue;
+		height: 20.5cm;
+		width:1.5cm;
+
+		}
+		body {
+		  font-family: sans-serif;
+		  
+		  
+		}
+
+		.container {
+		  display: flex;
+		  align-items: flex-end;
+		  
+		}
+		
+		.box{
+		  display: flex;
+		  justify-content: center;
+		  background-color
+		}
+
+		.podium__item {
+		  width: 200px;
+		  
+		}
+
+		.podium__rank {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  font-size: 35px;
+		  color: #fff;
+		  margin-left: auto;
+			
+		}
+
+		.podium__city {
+		  text-align: center;
+		  padding: 0 .5rem;
+		  
+		}
+		
+		.podium__number {
+		  width: 27px;
+		  height: 75px;
+		}
+
+		.podium .first {
+		  min-height: 300px;
+		  background: #1f77b4;
+		background: 
+		  linear-gradient(333deg, 
+		  rgba(51,168,255,1) 0%, 
+		  rgba(61,158,245,1) 13%, 
+		  rgba(71,148,250,1) 53%, 
+		  rgba(81,138,240,1) 100%);
+		}
+
+		.podium .second {
+		  min-height: 200px;
+		  background: #ff7f0e;
+		}
+
+		.podium .third {
+		  min-height: 100px;
+		  background: #2ca02c;
+		}
+		
+		.bxo {
+		  display: block;
+		  justify-content: center;
+		}
+	</style>
 </head>
 	<body>
-<div id="interface">
-			<div>
-				<img src="file:///D:/jose/Estatística/images/Cap.png" width="900" height="467" class = "header"/>
-				<h1 >RELATÓRIO ESTATÍSTICOS DE CURSOS E RECURSOS UTILIZADOS<br><br><{data}><br><br><br><br><br><br><br><br><br><br><br><br></h1>
-			</div>
-			<div class = "one">
-				<h2>Treinamentos realizados-Fundamentos de Impressão I - 3D Finder </h2>
-				<img src="file:///D:/jose/Estatística/images/finder.PNG" class = "finder"/><br><br><br>
-				<img src="file:///D:/jose/Estatística/images/Treinamento Semipresencial  - Fundamentos de Impressão 3D_table.png" class = "table"/>
-				<img src="file:///D:/jose/Estatística/images/Treinamento Semipresencial  - Fundamentos de Impressão 3D.png" class = "graph"/>
-
-			</div>
-			<div class = "two">
-				<h3>Treinamentos realizados-Fundamentos de impressao 3D II - Zmorph</h3> 
-				<img src="file:///D:/jose/Estatística/images/zmorph.PNG" class = "zmorph"/>
-				<tabela>
-				<grafico>
-			</div>
-			<div class = "three">
-				<h4>Treinamentos realizados-Gravadora e Cortado Laser</h4> 
-				<img src="file:///D:/jose/Estatística/images/cortadora.PNG" class = "laser"/>
-				<tabela>
-				<grafico>
-			</div >
-			<div>
-				<h5>RESERVAS DE TODOS EQUIPAMENTOS (EM HORAS)<br><{data}></h5>
+			
+			<div class="page">
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					<img src="./images/Cap.png" width="820" height="467" class = "header"/>
+					<h1 >RELATÓRIO ESTATÍSTICOS DE CURSOS E RECURSOS UTILIZADOS</h1>
+				</div>
+				<div class="horizontalCenterColumn">
+					
+					<h1 >*2023*</h1>
+				</div>
 				
-				<tabela>
-				<grafico>
 			</div>
-		</div>
+
+			<div class="page">
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+			
+				<div class="horizontalCenterColumn">
+					<div class="horizontalCenterRowTitle">
+						<h2>Treinamentos Realizados - Fundamentos de Impressão I - 3D Finder </h2>
+						<img src="./images/finder.PNG" class ="finder"/><br>
+					</div>
+						<img src="./images/Treinamento Semipresencial  - Fundamentos de Impressão 3D_table.png" width="1000px"  class = "table"/>
+					</div>
+				</div>
+				
+			<div class="page" >
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					<img src="./images/Treinamento Semipresencial  - Fundamentos de Impressão 3D.png" width="1100px" height="400px" class = "graph"/>
+				</div>
+			</div>
+			<div class="page">
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					<div class="horizontalCenterRowTitle">
+						<h3>Treinamentos Realizados - Fundamentos de impressao 3D II - Zmorph</h3> 
+						<img src="./images/zmorph.PNG" class = "zmorph"/>
+					</div>
+					</div>
+						<img src="./images/Fundamentos de impressão 3D - 2  (IMPRESSORA ZMOPH VX)_table.png" width="1000px" class = "table"/>
+					</div>
+
+			<div class="page" >
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					<img src="./images/Fundamentos de impressão 3D - 2  (IMPRESSORA ZMOPH VX).png" width="1100px" height="400px" class = "graph"/>
+				</div>
+			</div>
+			<div class="page">
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+					<div class="horizontalCenterColumn">
+						<div class="horizontalCenterRowTitle">
+							<h4>Treinamentos Realizados - Gravadora e Cortadora Laser</h4> 
+							<img src="./images/cortadora.jpg" height="100px" width="100px" class ="laser"/><br>
+						</div>
+					</div>
+						<img src="./images/Treinamento Semipresencial - Cortadora e gravadora a Laser_table.png"  width="1000px" class = "table"/>
+					</div>
+
+			<div class="page" >
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					<img src="./images/Treinamento Semipresencial - Cortadora e gravadora a Laser.png" width="1100px" height="400px" class = "graph"/>
+				</div>
+			</div>
+			<div class="page">
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+					<div class="horizontalCenterColumn">
+						<div class="horizontalCenterRowTitle">
+							<h5>Treinamentos Realizados - PROTOTIPADORA DE CIRCUITO ELETRÔNICO(PCB)</h5> 
+							<img src="./images/pcb.png" height="100px" width="200px" class ="pcb"/><br>
+						</div>
+					</div>
+						<img src="./images/Treinamento Semipresencial- PROTOTIPADORA DE CIRCUITO ELETRÔNICO (PCB)_table.png" width="1000px" class = "table"/>
+					</div>
+
+			<div class="page" >
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					<img src="./images/Treinamento Semipresencial- PROTOTIPADORA DE CIRCUITO ELETRÔNICO (PCB).png" width="1100px" height="400px" class = "graph"/>
+				</div>
+			</div>
+			<div class="page">
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					
+					<div class="horizontalCenterRowTitle">
+						<h5>
+							Reservas de todos Equipamentos(Horas)
+						</h5>
+					</div>
+				</div>
+						<img src="./images/Horas Máquina_table.png" height="600px" width="1000px" class = "rh"/>
+			</div>
+			<div class="page" >
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					<img src="./images/Horas Máquina.png" width="1500px" height="850px" class = "graph"/>
+				</div>
+			</div>
+			
+			<div class="page">
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					
+					<div class="horizontalCenterRowTitle">
+						<h5>
+							Relação Anual de Treinamentos
+						</h5>
+					</div>
+				</div>
+						<img src="./images/Relação Anual de Treinamentos_table.png"  class = "table"/>
+			</div>
+			<div class="page" >
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					<img src="./images/Relação Anual de Treinamentos.png" width="1500px" height="850px" class = "graph"/>
+				</div>
+			</div>
+			<div class="page">
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div class="horizontalCenterColumn">
+					
+					<div class="horizontalCenterRowTitle">
+						<h5>
+							Cursos que utilizaram mais o laboratório *2023*
+						</h5>
+					</div>
+					<img src="./images/Horas Máquina_rank.png"  class = "rank"/>
+					<img src="./images/rank_pie.png" width="600px" height="600px" class = "pie"/>
+				</div>
+			</div>
+			
+			<div class="page2" >
+				<div id="p1" class ="curved-div"></div>
+				<div id="p1" class ="curved-div2"></div>
+				<div id="p1" class ="box">
+					<div class="container podium">
+					  <div class="podium__item">
+						<p class="podium__city"> [ Engenharia de Produção]</p>
+						<div class="podium__rank second"><p style="font-size:48px">&#129352</p></div>
+					  </div>
+					  <div class="podium__item">
+						<p class="podium__city"> [ Engenharia de Computação]</p>
+						<div class="podium__rank first"><p style="font-size:48px">&#129351</p></div>
+					</div>
+					  <div class="podium__item">
+						<p class="podium__city">   [ UNISANTA/COLÉGIO]</p>
+						<div class="podium__rank third"><p style="font-size:48px">&#129353</p></div>
+					  </div>
+					  </div>
+					  </div>
+					  
+			</div>
+			
+				
+
+			
 </body>
 </html>

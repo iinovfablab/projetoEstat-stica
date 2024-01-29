@@ -10,10 +10,11 @@ class ReserveModel(ConnectionDB):
         self.__conn = self.connection_db()
 
     
-    def find_by_machine(self, machine_id):
+    def find_by_machine(self, machine_id, date_first, date_last=None):
+        cursor = self.__conn.cursor()
 
-
-        query = """select count(sp.id), g.name from public.statistic_profiles sp 
+        if not date_last:
+            query = """select count(sp.id), g.name from public.statistic_profiles sp 
                         inner join public.reservations r on
                         r.statistic_profile_id = sp.id
                         inner join public.slots_reservations sr on
@@ -24,11 +25,27 @@ class ReserveModel(ConnectionDB):
                         g.id = sp.group_id
                         inner join public.machines m on
                         m.id = r.reservable_id 
-                        where r.reservable_type ='Machine' and r.created_at > '2022-01-01 08:00:00' and m.id = %s
+                        where r.reservable_type ='Machine' and r.created_at >= %s and m.id = %s
                         group by g.name"""
+            cursor.execute(query,(date_first, machine_id,))
+            
+        else:
+            query = """select count(sp.id), g.name from public.statistic_profiles sp 
+                            inner join public.reservations r on
+                            r.statistic_profile_id = sp.id
+                            inner join public.slots_reservations sr on
+                            sr.reservation_id = r.id 
+                            inner join public.slots s on
+                            sr.slot_id = s.id
+                            inner join public."groups" g on
+                            g.id = sp.group_id
+                            inner join public.machines m on
+                            m.id = r.reservable_id 
+                            where r.reservable_type ='Machine' and r.created_at >= %s and %s < r.created_at and m.id = %s
+                            group by g.name"""
+            cursor.execute(query,(date_first, date_last, machine_id,))
         
-        cursor = self.__conn.cursor()
-        cursor.execute(query,(machine_id,))
+        
         result = cursor.fetchall()
         return result
     

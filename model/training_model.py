@@ -39,7 +39,7 @@ class TrainingModel(ConnectionDB):
                         t.id = spt.training_id 
                         inner join public."groups" g on
                         sp.group_id = g.id 
-                        where spt.updated_at >= %s and spt.updated_at < %s
+                        where spt.created_at >= %s and spt.created_at < %s
                         group by g."name"
                     """
 
