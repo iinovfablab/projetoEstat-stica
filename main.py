@@ -174,7 +174,6 @@ if __name__ == "__main__":
                 ind.append(index)
 
         dfk = dfm.iloc[ind]
-        print(dfk.index.values)
         dfm = dfm.drop(index=dfk.index.values)
 
         dfk.to_excel(cc+"Horas Máquina_NFC.xlsx")
@@ -230,7 +229,7 @@ if __name__ == "__main__":
                                  ('vertical-align', 'left')]),
                     dict(selector="td",
                           props=[("font-size", "8px"),
-                                 #('height', '30%'),
+                                 ('height', '10%'),
                                  ('width', '1200px'),
                                  ]),],
                 ) 
@@ -265,7 +264,7 @@ if __name__ == "__main__":
                       props=[
                           ("writing-mode", "vertical-rl"),
                           ('transform', 'rotateZ(180deg)'),
-                          ('heigth', '50%'),
+                          ('height', '7%'),
                           ('width', '100%'),
                           ('vertical-align', 'left')]),
                 ],
